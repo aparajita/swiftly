@@ -1,0 +1,71 @@
+{
+  "name": "@aparajita/swiftly",
+  "version": "1.0.0",
+  "description": "A wrapper around swiftlint and swiftformat that combines their execution and formats their output like eslint",
+  "main": "index.js",
+  "bin": {
+    "swiftly": "lib/cli.mjs"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js,.mjs .",
+    "lint.fix": "pnpm lint --fix .",
+    "prettier": "prettier --check .",
+    "prettier.fix": "prettier --check --write .",
+    "check": "pnpm lint && pnpm prettier && echo '✅ All good!'",
+    "check.fix": "pnpm lint.fix && pnpm prettier.fix && echo '✅ All good!'",
+    "swiftly": "lib/cli.mjs",
+    "test": "lib/cli.mjs 'test/*.swift'",
+    "test.fix": "./copy-tests.sh && lib/cli.mjs test/fixed --fix",
+    "release": "commit-and-tag-version",
+    "push": "git push --follow-tags origin main"
+  },
+  "keywords": [
+    "lint",
+    "linter",
+    "formatter",
+    "swiftlint",
+    "swiftformat",
+    "swift"
+  ],
+  "author": "Aparajita Fishman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aparajita/swiftlinter.git"
+  },
+  "homepage": "https://github.com/aparajita/swiftlinter",
+  "bugs": "https://github.com/aparajita/swiftlinter/issues",
+  "devDependencies": {
+    "@aparajita/eslint-config-base": "^1.1.2",
+    "@aparajita/prettier-config": "^1.0.0",
+    "@types/node": "^18.0.0",
+    "@types/yargs": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "commit-and-tag-version": "^10.0.1",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.1.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "compare-func": "^2.0.0",
+    "fast-glob": "^3.2.11",
+    "swiftlint": "^1.0.1",
+    "thenby": "^1.3.4",
+    "yargs": "^17.5.1"
+  },
+  "prettier": "@aparajita/prettier-config"
+}
