@@ -1,13 +1,11 @@
 # swiftly
 
-[TOC]
+[`swiftlint`](https://realm.github.io/SwiftLint/) is an essential tool for checking and formatting Swift code. But it doesn’t do much formatting, especially compared to `Prettier`. That’s where [`swiftformat`](https://github.com/nicklockwood/SwiftFormat#readme) shines, because it lets you (almost) forget about formatting your code altogether, just like `Prettier`. Wouldn’t it be great to be able to run both `swiftlint` and `swiftformat` as one? Now you can!
 
-## About
+This package installs a binary that wraps the functionality of both `swiftlint` and `swiftformat` together, while offering the following advantages:
 
-This package installs a binary that wraps the functionality of both [`swiftlint`](https://realm.github.io/SwiftLint/) and [`swiftformat`](https://github.com/nicklockwood/SwiftFormat#readme) together, while offering the following advantages:
-
-- Errors from both executables are aggregated and sorted.
-- The output is reformatted to be **way** easier to read, including a concise and informative summary at the end.
+- Errors from both tools are aggregated and sorted.
+- The output from both tools is reformatted in a unified way to be **way** easier to read, including a concise and informative summary at the end.
 - You can use globs with `swiftformat`.
 - Both binaries return a non-zero exit code if they find problems, which helps with command pipelines.
 
@@ -90,19 +88,19 @@ project
       Dialog.swift
 ```
 
-this would operate on everything in the `src` directory and its subdirectories:
+this would check every Swift file in the `src` directory and its subdirectories:
 
 ```shell
 % swiftly src
 ```
 
-while this would only operate on the files within the `src` directory:
+while this would only check Swift files within the `src` directory itself:
 
 ```shell
 % swiftly 'src/*.swift'
 ```
 
-and this would operate on all swift files in the project:
+and this would check all Swift files in the project:
 
 ```shell
 % swiftly '**/*.swift'
@@ -112,6 +110,6 @@ and this would operate on all swift files in the project:
 
 Because `swiftly` is passing arguments to two very different tools, you cannot pass configuration options (other than those listed above) directly to the tools from the command line. You can, however, use configuration files.
 
-Under the hood, `swiftly` uses [`node-swiftlint`](https://github.com/ionic-team/swiftlint#readme) to run `swiftlint`, so in addition to the standard `.swiftlint.yml` configuration file, you can also use an npm package as a config source.
+Under the hood, `swiftly` uses [`node-swiftlint`](https://github.com/ionic-team/swiftlint#readme) to run `swiftlint`, so in addition to the standard `.swiftlint.yml` configuration file, you can also use an npm package (such as [`@ionic/swiftlint-config`](https://github.com/ionic-team/swiftlint-config)) as a config source.
 
 As for `swiftformat`, you can use a standard [`.swiftformat`](https://github.com/nicklockwood/SwiftFormat#config-file) config file.
