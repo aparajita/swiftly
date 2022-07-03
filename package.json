@@ -21,8 +21,9 @@
     "swiftly": "lib/cli.mjs",
     "test": "lib/cli.mjs 'test/*.swift' || echo 'NOTE: There **should** be problems.'",
     "test.fix": "./copy-tests.sh && lib/cli.mjs test/fixed --fix || echo 'NOTE: There **should** be 1 error.'",
-    "release": "commit-and-tag-version",
-    "push": "git push --follow-tags origin main"
+    "push": "git push --follow-tags origin main",
+    "release.check": "commit-and-tag-version ${VERSION:+-r $VERSION} --dry-run",
+    "release": "commit-and-tag-version ${VERSION:+-r $VERSION} && pnpm push && pnpm publish"
   },
   "keywords": [
     "lint",
