@@ -19,8 +19,8 @@
     "check": "pnpm lint && pnpm prettier && echo '\u001b[32m✔︎\u001b[0m All good!'",
     "check.fix": "pnpm lint.fix && pnpm prettier.fix && echo '\u001b[32m✔︎\u001b[0m All good!'",
     "swiftly": "lib/cli.mjs",
-    "test": "lib/cli.mjs 'test/*.swift'",
-    "test.fix": "./copy-tests.sh && lib/cli.mjs test/fixed --fix",
+    "test": "lib/cli.mjs 'test/*.swift' || echo 'NOTE: There **should** be problems.'",
+    "test.fix": "./copy-tests.sh && lib/cli.mjs test/fixed --fix || echo 'NOTE: There **should** be 1 error.'",
     "release": "commit-and-tag-version",
     "push": "git push --follow-tags origin main"
   },
