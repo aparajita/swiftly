@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [1.0.4](https://github.com/aparajita/swiftlinter/compare/v1.0.3...v1.0.4) (2022-07-11)
+
+
+### Bug Fixes
+
+* users must install this for its binary ([3855d90](https://github.com/aparajita/swiftlinter/commit/3855d9099d2582fc6cb183d4a1ee33a9072f48ca))
+
 ### [1.0.3](https://github.com/aparajita/swiftlinter/compare/v1.0.2...v1.0.3) (2022-07-11)
 
 

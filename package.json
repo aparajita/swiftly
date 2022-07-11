@@ -1,6 +1,6 @@
 {
   "name": "@aparajita/swiftly",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A wrapper around swiftlint and swiftformat that combines their execution and formats their output like eslint",
   "main": "index.js",
   "bin": {
