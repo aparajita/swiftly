@@ -70,7 +70,7 @@
     "yargs": "^17.5.1"
   },
   "peerDependencies": {
-    "swiftlint": "^1.0.1"
+    "swiftlint": "^2.0.0"
   },
   "prettier": "@aparajita/prettier-config",
   "swiftlint": "@ionic/swiftlint-config"
