@@ -1,4 +1,4 @@
-module.exports = {
+const exports = {
   types: [
     { type: 'feat', section: 'Features' },
     { type: 'fix', section: 'Bug Fixes' },
@@ -7,6 +7,8 @@ module.exports = {
     { type: 'style', section: 'Style' },
     { type: 'refactor', section: 'Refactoring' },
     { type: 'perf', section: 'Performance' },
-    { type: 'test', hidden: true }
-  ]
+    { type: 'test', hidden: true },
+  ],
 }
+
+export default exports

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/aparajita/swiftlinter/compare/v1.0.4...v2.0.0) (2025-07-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* update swiftlint dependency
+
+### Features
+
+* update swiftlint dependency ([9330b55](https://github.com/aparajita/swiftlinter/commit/9330b551b1587dc04324d88af475b2208c7847de))
+
 ### [1.0.4](https://github.com/aparajita/swiftlinter/compare/v1.0.3...v1.0.4) (2022-07-11)
 
 
